@@ -34,8 +34,10 @@ This is the easiest way to run and test the app entirely from your browser!
 Once your Codespace is ready, open the terminal and run:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
+
+**Note:** If you have an older Docker version, you may need to use `docker-compose` (with hyphen) instead.
 
 ### Step 3: Access the Application
 
@@ -73,7 +75,7 @@ cd claude-web-test
 
 2. Start both services:
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 3. Access the application:
@@ -82,7 +84,7 @@ docker-compose up --build
 
 4. Stop the application:
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## API Endpoints
@@ -152,19 +154,19 @@ npm run dev
 
 - Check the "Ports" tab in VS Code
 - Manually forward ports 3000 and 5173 if needed
-- Make sure docker-compose is running
+- Make sure docker compose is running
 
 ### Cannot connect to backend from frontend?
 
-- Ensure both containers are running: `docker-compose ps`
-- Check backend logs: `docker-compose logs backend`
+- Ensure both containers are running: `docker compose ps`
+- Check backend logs: `docker compose logs backend`
 - Verify the backend is listening on 0.0.0.0, not localhost
 
 ### Frontend not loading?
 
-- Check frontend logs: `docker-compose logs frontend`
+- Check frontend logs: `docker compose logs frontend`
 - Make sure port 5173 is accessible
-- Try rebuilding: `docker-compose up --build`
+- Try rebuilding: `docker compose up --build`
 
 ## Next Steps
 

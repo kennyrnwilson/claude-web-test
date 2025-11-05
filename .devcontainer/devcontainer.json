@@ -1,8 +1,9 @@
 {
   "name": "Two-Layer App",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "frontend",
-  "workspaceFolder": "/app",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
   "forwardPorts": [3000, 5173],
   "portsAttributes": {
     "3000": {
@@ -27,6 +28,6 @@
       }
     }
   },
-  "postCreateCommand": "echo '🚀 Two-Layer App Ready! Run docker-compose up to start both services.'",
+  "postCreateCommand": "echo '🚀 Two-Layer App Ready! You can either: 1) Run \"docker compose up --build\" to use Docker, OR 2) Run services separately with npm (see README)'",
   "remoteUser": "node"
 }
